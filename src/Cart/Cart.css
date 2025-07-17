@@ -1,0 +1,49 @@
+.cart{
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart h1{
+    margin: 0;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 5px #333333;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    
+
+}
+.sidebar span{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(35, 148, 248);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    margin: 20px;
+    cursor: pointer;
+}
+.cartCard{
+    width: 290px;
+    height: 400px;
+    box-shadow: 5px 5px 5px #dadada;
+}
+.cartCard input{
+    width: 30px;
+    height: 20px;
+}
+.cartCard .quantity{
+    display: flex;
+    align-items: center;
+}
