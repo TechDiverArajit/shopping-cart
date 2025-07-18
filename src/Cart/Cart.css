@@ -11,16 +11,15 @@
 }
 
 .sidebar{
-    width: 300px;
+    width: 0;
     height: 100vh;
     background-color: aliceblue;
     box-shadow: 5px 5px 5px #333333;
     position: fixed;
     right: 0;
     top: 0;
-    display: none;
     z-index: 1;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     
 
 }
