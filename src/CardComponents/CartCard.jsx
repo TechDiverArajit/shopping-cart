@@ -1,10 +1,15 @@
-
+import { useEffect } from "react";
 import { useCart } from "../Context/cart-counter";
 const CartCard =({obj})=>{
     const {cart , cartDispatch} = useCart();
     const deleteItem = ()=>{
         cartDispatch({type:"REMOVE",payload: obj.id })
     }
+
+    useEffect(()=>{
+    localStorage.setItem("products",JSON.stringify(cart.cartProducts));
+    },[cart.cartProducts])
+
     return(
         <>
         <div className="cartCard shadow-2xl mr-10 mt-10  ">

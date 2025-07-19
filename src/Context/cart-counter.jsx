@@ -10,7 +10,7 @@ const cartCounter = createContext();
 const CartCountProvider = ({children})=>{
 
  const initialState = {
-        cartProducts:[],
+        cartProducts:JSON.parse(localStorage.getItem("products"))||[],
     }
 
     const[cart , cartDispatch] = useReducer(cartReducer,initialState);

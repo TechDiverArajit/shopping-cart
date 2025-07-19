@@ -1,15 +1,20 @@
 import { useReducer } from "react"
-import Products from "../DB/Products"
+
 import Cart from "../Cart/Cart"
 import { useCart } from "../Context/cart-counter"
+import { useNavigate } from 'react-router-dom';
 
 const Shoes = ({obj})=>{
-
+    const navigate = useNavigate();
     const {cartDispatch} = useCart();
 
     const add =()=>{
         cartDispatch({type:"ADD", payload: obj})
     }
+
+    const productPage = ()=>{
+    navigate(`/ProductInfo/${obj.id}`)
+  }
     
     
     return(
@@ -17,13 +22,15 @@ const Shoes = ({obj})=>{
         
         
         <div className="card">
+            <div onClick={productPage}>
             <img className="shoe-img" src={obj.img} alt="" />
             <div className="info">
                 <h1>{obj.title}</h1>
                 <h4>MRP:₹{obj.price} </h4>
-               <button onClick={add}><img src="./src/assets/parcel.png" alt="" /></button>
+               
             </div>
-            
+            </div>
+            <button  className="ml-5" onClick={add}><img src="./src/assets/parcel.png" alt="" /></button>
         </div>
         </>
     )

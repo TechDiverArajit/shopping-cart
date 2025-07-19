@@ -1,11 +1,16 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
 /* index.css or App.css */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: "outfit";
+}
+
+.dark{
+  background-color: black;
 }
 
 .card{
@@ -61,3 +66,4 @@ body {
   flex-wrap: wrap;
   margin: 120px
 }
+

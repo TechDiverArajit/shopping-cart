@@ -4,11 +4,18 @@ import './index.css'
 import './Cart/Cart.css'
 import App from './App.jsx'
 import { CartCountProvider } from './Context/cart-counter.jsx'
+import { ThemeContextProvider } from './Context/theme-context.jsx'
+import {BrowserRouter} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartCountProvider>
-      <App/>
+      <ThemeContextProvider>
+        <BrowserRouter>
+        <App/>
+        </BrowserRouter>
+        
+      </ThemeContextProvider>
     </CartCountProvider>
     
   </StrictMode>,
